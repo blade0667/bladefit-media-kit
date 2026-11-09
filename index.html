@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="BladeFit: app de treino, dieta e evolução para academias, personal trainers, nutricionistas e empresas.">
+<meta property="og:title" content="BladeFit · Media kit">
+<meta property="og:description" content="Treino, dieta e evolução num app só. Telas reais, funcionalidades e modelos de parceria.">
+<meta property="og:image" content="https://blade0667.github.io/bladefit-media-kit/img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#050506">
+<title>BladeFit Media Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Chakra+Petch:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: HUD de academia — faixas escuras, cortes chanfrados do app, telas reais em "lâminas" ao lado do texto */
+:root {
+  --bg: #050506;
+  --surface: #0c0d10;
+  --surface-2: #14151a;
+  --line: rgba(255, 46, 59, 0.22);
+  --fg: #ecedef;
+  --muted: #8b909a;
+  --red: #ff2e3b;
+  --red-deep: #9e0716;
+  --ok: #18e07a;
+  --water: #3d9bff;
+  --font-mark: "Orbitron", "Chakra Petch", system-ui, sans-serif;
+  --font-head: "Chakra Petch", "Barlow", system-ui, sans-serif;
+  --font-body: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --cut: 14px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 21px; font-weight: 600; }
+p { margin: 0; max-width: 62ch; }
+.over {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.over::before { content: "// "; }
+.muted { color: var(--muted); }
+.cut {
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+}
+
+/* Topo */
+header.top {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #1a0306 0%, var(--bg) 100%);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; flex-wrap: wrap; }
+.mark { font-family: var(--font-mark); font-weight: 900; font-size: 24px; letter-spacing: 0.04em; }
+.mark span { color: var(--red); }
+.top nav { display: flex; gap: 18px; flex-wrap: wrap; font-family: var(--font-head); font-weight: 500; font-size: 14px; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a:hover, .top nav a:focus-visible { color: var(--fg); }
+
+/* Abertura */
+.hero { padding-block: 56px 40px; }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
+.hero h1 { font-size: clamp(36px, 5.6vw, 64px); font-weight: 700; margin-top: 14px; }
+.hero h1 em { font-style: normal; color: var(--red); }
+.hero .lede { font-size: 19px; color: #c9ccd2; margin-top: 18px; }
+.hero .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.chip {
+  font-family: var(--font-head); font-weight: 600; font-size: 13px; letter-spacing: 0.04em;
+  padding: 7px 12px; background: var(--surface-2); color: var(--fg); border: 1px solid var(--line);
+}
+.hero-shots { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; min-width: 0; }
+.hero-shots .phone:nth-child(2) { margin-top: 48px; }
+.phone {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 6px;
+  min-width: 0;
+}
+.phone img { display: block; width: 100%; height: auto; }
+.widget-band { margin-top: 36px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 28px; align-items: center; }
+.widget-band .phone { padding: 0; border: 0; background: none; }
+.widget-band img { width: 100%; height: auto; display: block; border-radius: 22px; }
+
+/* Números */
+.facts { border-block: 1px solid var(--line); background: var(--surface); }
+.facts .wrap { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; }
+.fact { padding: 22px 12px; border-left: 1px solid var(--line); min-width: 0; }
+.fact:first-child { border-left: 0; }
+.fact b { display: block; font-family: var(--font-head); font-weight: 700; font-size: 30px; color: var(--fg); font-variant-numeric: tabular-nums; }
+.fact span { font-size: 14px; color: var(--muted); line-height: 1.35; display: block; }
+
+section.block { padding-block: 72px; }
+section.block + section.block { border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.head { display: grid; gap: 12px; margin-bottom: 36px; }
+
+/* Segmentos */
+.segments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.seg { background: var(--surface); border: 1px solid var(--line); padding: 24px; display: grid; gap: 10px; align-content: start; }
+.seg .who { font-family: var(--font-head); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.seg ul { margin: 4px 0 0; padding-left: 18px; color: #c9ccd2; }
+.seg li { margin-top: 4px; }
+
+/* Funcionalidades */
+.feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 44px; align-items: start; }
+.feature + .feature { margin-top: 72px; }
+.feature.flip .copy { order: 2; }
+.feature .copy { display: grid; gap: 14px; align-content: start; position: sticky; top: 24px; min-width: 0; }
+.feature .copy ul { margin: 2px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.feature .copy li { padding-left: 22px; position: relative; color: #d3d6db; }
+.feature .copy li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 9px; height: 9px; background: var(--red); clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%); }
+.feature .copy li b { color: var(--fg); font-weight: 600; }
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; min-width: 0; }
+.shots.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+figcaption { font-family: var(--font-head); font-size: 13px; color: var(--muted); letter-spacing: 0.02em; }
+
+/* Diferenciais */
+.diffs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--line); }
+.diff { padding: 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: grid; gap: 8px; align-content: start; min-width: 0; }
+.diff:nth-child(3n) { border-right: 0; }
+.diff:nth-last-child(-n+3) { border-bottom: 0; }
+.diff h3 { font-size: 18px; }
+.diff p { color: #c3c6cc; font-size: 16px; }
+
+/* Parcerias */
+.models { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.model { background: var(--surface); border: 1px solid var(--line); padding: 26px; display: grid; gap: 12px; align-content: start; }
+.model.lead { background: linear-gradient(160deg, #2a050a 0%, var(--surface) 70%); border-color: rgba(255, 46, 59, 0.5); }
+.model .tag { font-family: var(--font-head); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); }
+.model ul { margin: 0; padding-left: 18px; color: #c9ccd2; font-size: 16px; }
+.model li { margin-top: 4px; }
+
+/* Roadmap */
+.road { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.step { border-top: 3px solid var(--red); padding-top: 16px; display: grid; gap: 8px; align-content: start; }
+.step.next { border-top-color: var(--muted); }
+.step .when { font-family: var(--font-head); font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.step ul { margin: 0; padding-left: 18px; color: #c9ccd2; font-size: 16px; }
+
+/* Ficha técnica */
+.spec-wrap { overflow-x: auto; }
+table.spec { width: 100%; border-collapse: collapse; font-size: 16px; min-width: 520px; }
+.spec th, .spec td { text-align: left; padding: 12px 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.07); vertical-align: top; }
+.spec th { font-family: var(--font-head); font-weight: 600; color: var(--muted); width: 34%; }
+
+/* Fechamento */
+.close { background: linear-gradient(120deg, var(--red-deep) 0%, #2a050a 55%, var(--bg) 100%); border-top: 1px solid var(--line); }
+.close .wrap { padding-block: 64px; display: grid; gap: 18px; }
+.close h2 { font-size: clamp(30px, 4.4vw, 48px); }
+.close p { color: #e6d7d9; font-size: 18px; }
+.contact { margin-top: 10px; background: rgba(5, 5, 6, 0.55); border: 1px solid rgba(255, 211, 214, 0.25); padding: 22px 24px; display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; }
+.contact-who { display: grid; gap: 2px; }
+.contact-who b { font-family: var(--font-head); font-size: 22px; }
+.muted-light { color: #e6c3c6; font-size: 14px; }
+.contact-num { font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 4vw, 38px); letter-spacing: 0.02em; font-variant-numeric: tabular-nums; user-select: all; }
+.contact-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-wa, .btn-copy { font-family: var(--font-head); font-weight: 600; font-size: 15px; letter-spacing: 0.04em; padding: 12px 18px; border: 0; cursor: pointer; text-decoration: none; }
+.btn-wa { background: var(--fg); color: #0c0d10; }
+.btn-copy { background: transparent; color: var(--fg); outline: 1px solid rgba(255, 211, 214, 0.45); outline-offset: -1px; }
+@media (max-width: 760px) { .contact { grid-template-columns: 1fr; } }
+footer { padding-block: 28px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: grid; gap: 6px; }
+
+a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .hero .wrap, .feature, .widget-band { grid-template-columns: 1fr; }
+  .feature.flip .copy { order: 0; }
+  .feature .copy { position: static; }
+  .facts .wrap { grid-template-columns: repeat(3, 1fr); }
+  .fact:nth-child(4) { border-left: 0; }
+  .fact:nth-child(n+4) { border-top: 1px solid var(--line); }
+  .diffs, .models, .road { grid-template-columns: 1fr; }
+  .diff { border-right: 0; }
+  .diff:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
+  .diff:last-child { border-bottom: 0; }
+}
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .segments { grid-template-columns: 1fr; }
+  .shots.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facts .wrap { grid-template-columns: repeat(2, 1fr); }
+  .fact:nth-child(odd) { border-left: 0; }
+  .fact:nth-child(4) { border-left: 1px solid var(--line); }
+  .fact:nth-child(n+3) { border-top: 1px solid var(--line); }
+  section.block { padding-block: 52px; }
+}
+</style>
+<style>
+html, body { margin: 0; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="mark" aria-label="BladeFit">BLADE<span>FIT</span></div>
+    <nav aria-label="Seções">
+      <a href="#para-quem">Para quem</a>
+      <a href="#treino">Treino</a>
+      <a href="#dieta">Dieta</a>
+      <a href="#acompanhamento">Acompanhamento</a>
+      <a href="#parcerias">Parcerias</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="over">Media kit · 2026</div>
+        <h1>Treino, dieta e evolução <em>num app só</em>, com a marca de quem acompanha o aluno.</h1>
+        <p class="lede">O BladeFit organiza a ficha de treino, o plano alimentar e o progresso do dia a dia no celular do aluno. Academias, personal trainers e nutricionistas prescrevem; o aluno executa e enxerga o resultado.</p>
+        <div class="chips" aria-label="Destaques">
+          <span class="chip cut">Android 8+</span>
+          <span class="chip cut">Funciona offline</span>
+          <span class="chip cut">Sem cadastro obrigatório</span>
+          <span class="chip cut">Integra com Samsung Health e Google Fit</span>
+        </div>
+      </div>
+      <div class="hero-shots">
+        <div class="phone cut"><img src="img/hoje.webp" width="540" height="1120" alt="Tela Hoje do BladeFit com o treino sugerido do dia, a sequência ABC e o resumo da dieta."></div>
+        <div class="phone cut"><img src="img/dieta.webp" width="540" height="1120" alt="Tela Dieta com a rosca de macronutrientes, meta calórica, gasto previsto e déficit do dia."></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap">
+      <div class="fact"><b>110</b><span>exercícios com foto e músculo-alvo</span></div>
+      <div class="fact"><b>13</b><span>treinos prontos em 3 níveis</span></div>
+      <div class="fact"><b>597</b><span>alimentos da Tabela TACO</span></div>
+      <div class="fact"><b>18</b><span>suplementos com porções</span></div>
+      <div class="fact"><b>4</b><span>perfis: atleta, aluno, coach, professor</span></div>
+      <div class="fact"><b>7,6 MB</b><span>de instalação</span></div>
+    </div>
+  </div>
+
+  <section class="block" id="para-quem">
+    <div class="wrap">
+      <div class="head">
+        <div class="over">Para quem</div>
+        <h2>Uma ferramenta para quem prescreve, e um app que o aluno abre todo dia.</h2>
+        <p class="muted">O mesmo app atende o profissional e o aluno. O profissional monta e envia a ficha ou a dieta; o aluno recebe em um toque, pelo WhatsApp ou por QR Code.</p>
+      </div>
+      <div class="segments">
+        <article class="seg cut">
+          <div class="who">Academias</div>
+          <h3>Ficha digital para cada aluno, sem papel no balcão</h3>
+          <ul>
+            <li>Professores montam fichas a partir de 13 modelos prontos e de um catálogo com 110 exercícios.</li>
+            <li>O aluno recebe a ficha por QR Code na recepção ou pelo WhatsApp.</li>
+            <li>O app sugere o treino do dia, cronometra o descanso e registra as cargas.</li>
+          </ul>
+        </article>
+        <article class="seg cut">
+          <div class="who">Personal trainers e coaches</div>
+          <h3>Treino e dieta prescritos no mesmo lugar</h3>
+          <ul>
+            <li>Carteira de alunos com objetivo, nível e restrições médicas.</li>
+            <li>Ficha e cardápio enviados como arquivo, texto ou QR Code.</li>
+            <li>O aluno vê a progressão de carga sugerida a cada sessão.</li>
+          </ul>
+        </article>
+        <article class="seg cut">
+          <div class="who">Nutricionistas</div>
+          <h3>Plano alimentar que o paciente segue de verdade</h3>
+          <ul>
+            <li>Refeições com horário, quantidades em medidas caseiras ("3 unidades · 150 g") e macros.</li>
+            <li>Registro automático no horário de cada refeição, para quem repete o plano.</li>
+            <li>Lista de compras da semana gerada a partir do plano, com envio pelo WhatsApp.</li>
+          </ul>
+        </article>
+        <article class="seg cut">
+          <div class="who">Empresas e programas de bem-estar</div>
+          <h3>Benefício de saúde que funciona no celular do colaborador</h3>
+          <ul>
+            <li>Dados ficam no aparelho de cada pessoa, sem servidor central a administrar.</li>
+            <li>Relatório semanal que o próprio colaborador compartilha, se quiser.</li>
+            <li>Lembretes de água e refeições e widget na tela inicial para criar hábito.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="treino">
+    <div class="wrap">
+      <div class="feature">
+        <div class="copy">
+          <div class="over">Treino</div>
+          <h2>Do modelo pronto à série registrada.</h2>
+          <ul>
+            <li><b>Treino sugerido do dia:</b> o app segue o ciclo da ficha (A, B, C, descanso) e mostra o próximo treino na tela inicial.</li>
+            <li><b>13 treinos prontos</b> organizados em Iniciante, Intermediário e Avançado, prontos para adaptar.</li>
+            <li><b>Catálogo de 110 exercícios</b> com foto de execução, músculo-alvo, equipamento e descanso padrão.</li>
+            <li><b>Execução guiada:</b> séries, cargas e repetições em roda, cronômetro de descanso com vibração e aviso mesmo com a tela bloqueada.</li>
+            <li><b>Progressão de carga sugerida:</b> bateu o topo da faixa de repetições em todas as séries? O app propõe +2,5 kg na próxima sessão.</li>
+            <li><b>Calendário</b> com treinos feitos, dias de descanso, caminhadas e atividades importadas do relógio.</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <figure><div class="phone cut"><img src="img/treinos.webp" width="540" height="840" loading="lazy" alt="Lista de fichas com a ficha ativa e as pastas de treinos prontos por nível."></div><figcaption>Fichas e treinos prontos por nível</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/ficha.webp" width="540" height="1120" loading="lazy" alt="Ficha ABC aberta no treino A com exercícios, séries, repetições, descanso e observações."></div><figcaption>Ficha com séries, descanso e técnicas</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/exercicios.webp" width="540" height="1120" loading="lazy" alt="Catálogo de exercícios com filtros por músculo e equipamento e fotos de execução."></div><figcaption>Catálogo com filtros e fotos</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/calendario.webp" width="540" height="1120" loading="lazy" alt="Calendário do mês com treinos previstos A, B e C, descansos e atividades de caminhada."></div><figcaption>Calendário com o ciclo projetado</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="dieta">
+    <div class="wrap">
+      <div class="feature flip">
+        <div class="copy">
+          <div class="over">Dieta</div>
+          <h2>Um plano alimentar que se explica sozinho.</h2>
+          <ul>
+            <li><b>Meta calórica e macros</b> calculadas pelo perfil (Mifflin-St Jeor) ou definidas pelo profissional, com margem de ±2%.</li>
+            <li><b>Refeições com horário</b> que abrem como pastas e mostram o que comer antes mesmo de registrar.</li>
+            <li><b>Medidas caseiras:</b> "3 unidades · 150 g", "3 fatias · 75 g", "2 filés · 250 g".</li>
+            <li><b>Registro automático</b> no horário de cada refeição para quem segue o plano todo dia.</li>
+            <li><b>Busca na Tabela TACO</b>, leitor de código de barras (Open Food Facts) e receitas com valores por 100 g do prato pronto.</li>
+            <li><b>Lista de compras</b> da semana a partir do plano, com peso cru, unidades e envio pelo WhatsApp.</li>
+            <li><b>Saldo do dia:</b> gasto previsto (TMB + passos + treinos) contra a dieta completa, e quanto já foi consumido e gasto até agora.</li>
+          </ul>
+        </div>
+        <div class="shots three">
+          <figure><div class="phone cut"><img src="img/refeicoes.webp" width="540" height="1120" loading="lazy" alt="Refeições do dia: café consumido com alimentos em medidas caseiras e almoço previsto com os alimentos do plano."></div><figcaption>Refeições com medidas caseiras</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/editor.webp" width="540" height="960" loading="lazy" alt="Editor de refeição com nome, horário em roda e lista de alimentos com quantidades."></div><figcaption>Edição de refeição e horário</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/compras.webp" width="540" height="1120" loading="lazy" alt="Lista de compras da semana com itens por seção, peso cru e unidades."></div><figcaption>Lista de compras da semana</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/alimento.webp" width="540" height="730" loading="lazy" alt="Busca de alimentos com atalhos para leitor de código de barras, receitas e cadastro."></div><figcaption>Busca, código de barras e receitas</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/receita.webp" width="540" height="790" loading="lazy" alt="Editor de receita com ingredientes, peso final pronto, porções e valores por porção e por 100 g."></div><figcaption>Receitas com valores por porção</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/dieta.webp" width="540" height="1120" loading="lazy" alt="Resumo da dieta com consumo, meta, gasto previsto e déficit previsto do dia."></div><figcaption>Saldo previsto e "agora"</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="acompanhamento">
+    <div class="wrap">
+      <div class="feature">
+        <div class="copy">
+          <div class="over">Acompanhamento</div>
+          <h2>O aluno enxerga o progresso. O profissional recebe o resumo.</h2>
+          <ul>
+            <li><b>Evolução</b> com gráficos de déficit/superávit, peso, % de gordura, massa magra, metabolismo basal, carga, passos e batimentos.</li>
+            <li><b>Relatório semanal</b> com treinos feitos, média de calorias, dias na meta, saldo e água, enviado pelo WhatsApp em um toque.</li>
+            <li><b>Integração com Health Connect:</b> passos, calorias, batimentos, atividades e balança de bioimpedância (Samsung Health, Google Fit, Fitdays).</li>
+            <li><b>Lembretes</b> de água e de refeições, só quando ainda falta, com ações rápidas na notificação.</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <figure><div class="phone cut"><img src="img/evolucao.webp" width="540" height="1120" loading="lazy" alt="Gráfico de déficit e superávit calórico dos últimos 30 dias com média diária e efeito estimado no peso."></div><figcaption>Déficit/superávit em 30 dias</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/semana.webp" width="540" height="618" loading="lazy" alt="Relatório semanal com treinos, média de calorias e déficit da semana."></div><figcaption>Relatório semanal para compartilhar</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="widget-band">
+        <div class="copy" style="display:grid;gap:12px">
+          <div class="over">Widget na tela inicial</div>
+          <h3>O dia inteiro em um relance, sem abrir o app.</h3>
+          <p class="muted">Déficit previsto, consumo contra a meta, gasto até agora, macros, treino do dia e água com botão de +250 ml. Ajuda o aluno a manter a rotina entre uma consulta e outra.</p>
+        </div>
+        <div class="phone"><img src="img/widget.webp" width="720" height="423" loading="lazy" alt="Widget do BladeFit na tela inicial com déficit previsto, macros, água e treino do dia."></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="coach">
+    <div class="wrap">
+      <div class="feature flip">
+        <div class="copy">
+          <div class="over">Profissional e dados</div>
+          <h2>Quatro perfis, um app. Privacidade por padrão.</h2>
+          <ul>
+            <li><b>Atleta, Aluno, Coach e Professor:</b> cada perfil mostra o que faz sentido para quem usa.</li>
+            <li><b>Compartilhamento</b> de fichas e dietas por arquivo .bfit, texto no WhatsApp ou QR Code lido pela câmera do app.</li>
+            <li><b>Dados no aparelho:</b> nada é enviado a servidores. O único acesso à internet é a consulta de código de barras, que envia só o número do produto.</li>
+            <li><b>Backup completo</b> em arquivo, para trocar de celular sem perder histórico.</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <figure><div class="phone cut"><img src="img/perfil.webp" width="540" height="985" loading="lazy" alt="Perfil com os tipos Atleta, Aluno, Coach e Professor, meta semanal e lembretes."></div><figcaption>Perfis e lembretes</figcaption></figure>
+          <figure><div class="phone cut"><img src="img/hoje.webp" width="540" height="1120" loading="lazy" alt="Tela inicial com o treino sugerido e o resumo da dieta."></div><figcaption>Tela inicial do aluno</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="diferenciais">
+    <div class="wrap">
+      <div class="head">
+        <div class="over">Diferenciais</div>
+        <h2>Por que o aluno continua usando.</h2>
+      </div>
+      <div class="diffs">
+        <div class="diff"><h3>Treino e dieta juntos</h3><p>O saldo calórico considera o treino feito e os passos do dia. Não é preciso alternar entre apps.</p></div>
+        <div class="diff"><h3>Fala a língua do aluno</h3><p>"3 unidades" em vez de "150 g", peso cru na lista de compras e porções de suplementos.</p></div>
+        <div class="diff"><h3>Menos digitação</h3><p>Refeições registradas no horário, código de barras, receitas salvas e cargas preenchidas pela progressão.</p></div>
+        <div class="diff"><h3>Base brasileira</h3><p>Tabela TACO (NEPA/UNICAMP) com 597 alimentos e interface inteira em português.</p></div>
+        <div class="diff"><h3>Funciona sem internet</h3><p>Ficha, dieta, cronômetro e histórico ficam no aparelho. Bom para academia com sinal fraco.</p></div>
+        <div class="diff"><h3>Privacidade simples de explicar</h3><p>Sem conta obrigatória e sem dados de saúde em servidor, o que facilita a conversa sobre LGPD.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="parcerias">
+    <div class="wrap">
+      <div class="head">
+        <div class="over">Modelos de parceria</div>
+        <h2>Formatos para levar o BladeFit à sua operação.</h2>
+        <p class="muted">Condições e valores sob consulta, conforme o número de usuários e o nível de personalização.</p>
+      </div>
+      <div class="models">
+        <article class="model lead cut">
+          <div class="tag">Academias e redes</div>
+          <h3>Licença com a sua marca</h3>
+          <ul>
+            <li>Nome, cores e logo da academia no app (projeto sob medida).</li>
+            <li>Treinos prontos da casa já instalados.</li>
+            <li>Professores com perfil de prescrição.</li>
+          </ul>
+        </article>
+        <article class="model cut">
+          <div class="tag">Personal, coach e nutricionista</div>
+          <h3>Plano profissional</h3>
+          <ul>
+            <li>Carteira de alunos e prescrição de treino e dieta.</li>
+            <li>Envio por WhatsApp e QR Code.</li>
+            <li>Valor por faixa de alunos ativos.</li>
+          </ul>
+        </article>
+        <article class="model cut">
+          <div class="tag">Empresas</div>
+          <h3>Bem-estar corporativo</h3>
+          <ul>
+            <li>App para os colaboradores, com conteúdo da empresa.</li>
+            <li>Meta semanal de treinos e relatório semanal.</li>
+            <li>Dados de saúde mantidos no celular de cada pessoa.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="roadmap">
+    <div class="wrap">
+      <div class="head">
+        <div class="over">Roadmap</div>
+        <h2>O que já existe e o que vem a seguir.</h2>
+      </div>
+      <div class="road">
+        <div class="step">
+          <div class="when">Disponível hoje · v0.2.2</div>
+          <ul>
+            <li>Treino, dieta, evolução e relatório semanal</li>
+            <li>Health Connect, widget, lembretes e backup</li>
+            <li>Código de barras, receitas e lista de compras</li>
+          </ul>
+        </div>
+        <div class="step next">
+          <div class="when">Próximo</div>
+          <ul>
+            <li>Conta Google com backup na nuvem</li>
+            <li>Publicação na Google Play</li>
+            <li>Versão gratuita e plano Pro</li>
+          </ul>
+        </div>
+        <div class="step next">
+          <div class="when">Depois</div>
+          <ul>
+            <li>Perfil público e amigos por QR Code</li>
+            <li>Acompanhamento do aluno pelo profissional</li>
+            <li>Personalização de marca para parceiros</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="ficha-tecnica">
+    <div class="wrap">
+      <div class="head">
+        <div class="over">Ficha técnica</div>
+        <h2>Especificações.</h2>
+      </div>
+      <div class="spec-wrap">
+        <table class="spec">
+          <tbody>
+            <tr><th scope="row">Plataforma</th><td>Android 8.0 ou superior · APK de 7,6 MB</td></tr>
+            <tr><th scope="row">Tecnologia</th><td>Kotlin e Jetpack Compose, app nativo</td></tr>
+            <tr><th scope="row">Dados de saúde</th><td>Health Connect (leitura de passos, calorias, batimentos, atividades, peso e composição corporal; gravação dos treinos)</td></tr>
+            <tr><th scope="row">Alimentos</th><td>TACO 4ª ed. (NEPA/UNICAMP), 597 itens · 18 suplementos · Open Food Facts por código de barras · alimentos e receitas próprios</td></tr>
+            <tr><th scope="row">Exercícios</th><td>110 exercícios com fotos (free-exercise-db, domínio público) · 13 treinos prontos</td></tr>
+            <tr><th scope="row">Compartilhamento</th><td>Arquivo .bfit, texto para WhatsApp e QR Code</td></tr>
+            <tr><th scope="row">Armazenamento</th><td>Local, no aparelho · backup completo em arquivo</td></tr>
+            <tr><th scope="row">Idioma</th><td>Português (Brasil)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="close">
+  <div class="wrap">
+    <div class="over" style="color:#ffd3d6">Vamos conversar</div>
+    <h2>Quer ver o BladeFit funcionando com os seus alunos?</h2>
+    <p>Agende uma demonstração. Montamos uma ficha e um plano alimentar de exemplo com o conteúdo da sua academia, consultório ou empresa.</p>
+    <div class="contact cut">
+      <div class="contact-who">
+        <span class="over" style="color:#ffd3d6">Contato</span>
+        <b>Rafael</b>
+        <span class="muted-light">WhatsApp</span>
+      </div>
+      <div class="contact-num" id="phone">(22) 98168-0038</div>
+      <div class="contact-actions">
+        <a class="btn-wa cut" href="https://wa.me/5522981680038" target="_blank" rel="noopener">Abrir no WhatsApp</a>
+        <button class="btn-copy cut" id="copy" type="button">Copiar número</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mark" style="font-size:18px">BLADE<span>FIT</span></div>
+    <div>Contato: Rafael · WhatsApp (22) 98168-0038.</div>
+    <div>Telas reais do app, versão 0.2.2, capturadas em um Galaxy A51. Fotos de exercícios: free-exercise-db (domínio público). Tabela de alimentos: TACO (NEPA/UNICAMP). Produtos por código de barras: Open Food Facts (ODbL).</div>
+  </div>
+</footer>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var num = document.getElementById('phone');
+  if (!btn || !num) return;
+  function selectNum() {
+    var r = document.createRange(); r.selectNodeContents(num);
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    btn.textContent = 'Número selecionado';
+  }
+  btn.addEventListener('click', function () {
+    try {
+      navigator.clipboard.writeText('+55 22 98168-0038').then(function () { btn.textContent = 'Número copiado'; }, selectNum);
+    } catch (e) { selectNum(); }
+  });
+})();
+</script>
+
+</body>
+</html>
